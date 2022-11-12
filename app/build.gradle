@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+}
+
+
+def dialogx_version = "0.0.46"
+
+android {
+    buildToolsVersion '24.0.2'                 // Use 23.0.3 or higher
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.cwuom.logindemo"
+        minSdk 23
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        renderscriptSupportModeEnabled true    // Enable RS support
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'com.github.Chrisvin:FlipTabs:v1.5'
+
+    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+
+    implementation 'com.github.mmin18:realtimeblurview:1.2.1' // 遮罩模糊
+
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+
+    implementation 'com.github.thomhurst:ExpandableHintText:1.0.7' // 输入框
+
+    implementation 'nl.bryanderidder:themed-toggle-button-group:1.4.1'
+
+    implementation 'io.github.bitvale:switcher:1.1.2'
+
+    implementation "com.ncorti:slidetoact:0.9.0"
+
+    implementation 'com.github.Chrisvin:FlipTabs:v1.5'
+
+    implementation 'com.github.GwonHyeok:StickySwitch:0.0.16'
+
+    implementation 'com.raycoarana.codeinputview:codeinputview:2.1.1'
+    implementation "com.github.kongzue.DialogX:DialogX:${dialogx_version}"
+
+    implementation "com.github.kongzue.DialogX:DialogXIOSStyle:${dialogx_version}"
+    implementation "com.github.kongzue.DialogX:DialogXKongzueStyle:${dialogx_version}"
+    implementation "com.github.kongzue.DialogX:DialogXMIUIStyle:${dialogx_version}"
+    implementation "com.github.kongzue.DialogX:DialogXMaterialYou:${dialogx_version}"
+
+    implementation 'com.github.li-xiaojun:XPopup:2.9.12-beta'
+
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+}

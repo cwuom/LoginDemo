@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="800dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_code"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="放弃注册"
+            android:textColor="#FF5252"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/rsend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重新发送"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#448AFF"
+            android:layout_alignParentRight="true"/>
+
+
+        <ImageView
+            android:id="@+id/iv_v"
+            android:layout_width="150dp"
+
+            android:layout_height="150dp"
+            android:layout_alignBottom="@id/cancel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-156dp"
+            android:src="@drawable/verification" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_v"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-71dp"
+            android:text="验证您的邮箱"
+            android:textColor="#373737"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_v"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-109dp"
+            android:text="我们向您的邮箱地址投送了验证邮件"
+            android:textColor="#737373"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_v"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-140dp"
+            android:text="请您完成验证以助于完成注册"
+            android:textColor="#757575"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.raycoarana.codeinputview.CodeInputView
+            android:id="@+id/code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_f"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="-100dp"
+            app:code_text_color="#000000"
+            app:error_color="#FF5252"
+            app:input_type="numeric"
+            app:length_of_code="6"
+            app:underline_color="#457ad1"
+            app:underline_selected_color="#606060" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_ok">
+
+
+        <ImageView
+            android:id="@+id/iv_ok"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-156dp"
+            android:src="@drawable/ok" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_ok"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-71dp"
+            android:text="注册成功"
+            android:textColor="#373737"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_ok"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-130dp"
+            android:text="您已完成验证"
+            android:textColor="#717171"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_backLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_ok"
+            android:layout_marginBottom="-400dp"
+            android:background="@drawable/btn_ripple"
+            android:text="返回登录"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
